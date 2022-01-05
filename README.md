@@ -3,7 +3,7 @@
 ![Screenshot](assets/vim.png)
 ![Screenshot](assets/gvim.png)
 
-Download the contents of the repository to the
+Clone the repository with submodules(!) to the
 
   "~ / .vim" or "% USERPROFILE% \ vimfiles"
 
