@@ -3,11 +3,9 @@
 ![Screenshot](assets/vim.png)
 ![Screenshot](assets/gvim.png)
 
-Clone the repository with submodules(!) to the
+Clone the repository with submodules(!) to the "~ / .vim" or "% USERPROFILE% \ vimfiles" folder (depending on your platform):
 
-  "~ / .vim" or "% USERPROFILE% \ vimfiles"
-
-folder (depending on your platform);
+$ git clone --recursive https://bigov@github.com/bigov/vim_base.git .vim
 
 Using custom TTF font: "DejaVu Sans Mono for Powerline".
 
