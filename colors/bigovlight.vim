@@ -26,7 +26,7 @@ hi SignColumn guibg=white guifg=gray80 ctermfg=67 ctermbg=15
 hi LineNr ctermfg=250 ctermbg=15 guifg=gray80 guibg=white
 
 " Подсветка номера строки на линии курсора
-hi CursorLine cterm=NONE gui=NONE ctermbg=255 ctermfg=NONE guibg=gray96 guifg=NONE
+hi CursorLine cterm=NONE gui=NONE ctermbg=NONE ctermfg=NONE guibg=gray96 guifg=NONE
 hi CursorLineNr cterm=bold ctermfg=25 ctermbg=227 guifg=dodgerblue guibg=lightcyan1 gui=bold
 hi CursorColumn guifg=NONE guibg=gray96 ctermfg=NONE ctermbg=NONE
 

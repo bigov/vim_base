@@ -14,11 +14,7 @@ else
   set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
 endif
 
-set cursorline
 set cursorcolumn
-
-au WinLeave * set nocursorline
-au WinLeave * set nocursorcolumn
-au WinEnter * set cursorline
 au WinEnter * set cursorcolumn
+au WinLeave * set nocursorcolumn
 

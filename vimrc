@@ -22,8 +22,11 @@ set smartindent                 "добавление отступов, когд
 set backspace=indent,eol,nostop "https://vimhelp.org/options.txt.html#%27backspace%27
 set guioptions=gmt
 set showtabline=2
-set nocursorline
 set nocursorcolumn
+
+set cursorline
+au WinEnter * set cursorline
+au WinLeave * set nocursorline
 
 " Подсветка пробелов, табов и др. символов
 set list
