@@ -1,0 +1,9 @@
+_
+.git
+.netrwhist
+*.swp
+hgup.log
+.hg
+.hgignore
+^swap
+*.stackdump
