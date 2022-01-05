@@ -4,17 +4,17 @@ ino <C-S> <Esc>:write<cr>a
 map <F2> :write<cr>
 map <C-S> :write<cr>
 
-"[F3] - открыть файл
-ino <F3> <c-o>:Explore<cr>
-map <F3> :Explore<cr>
+"[F3] Execute current file as vim-script
+nn <F3> :so%<cr>
+ino <F3> <c-o>:w<cr><c-o>:so%<cr>
 
 "[F4] Переключени между файлами определений и объявлений
 nn <F4> :FSHere<cr>
 ino <F4> <c-o>:FSHere<cr>
 
-"[F6] Выполнить файл как скрипт
-nn <F6> :so%<cr>
-ino <F6> <c-o>:w<cr><c-o>:so%<cr>
+"[F6] Dialog for open new file
+ino <F6> <c-o>:Explore<cr>
+map <F6> :Explore<cr>
 
 "[F8] - включить/выключить панель навигации по коду
 no <F8> :TagbarToggle<cr>

@@ -10,13 +10,11 @@ au BufRead,BufNewFile *.vim setlocal ff=unix
 " Автоматическое назначение формата и кодировки для пакетных файлов MS-Windows
 au BufRead,BufNewFile *.\(cmd\|bat\) silent exec 'e ++enc=cp866 %' | setlocal ff=dos
 
-" Подсветка всех слов, равных слову под/перед курсором 
-" ---------------------
+" -----------------------------------------------------------------------------
 " Highlight all instances of word under cursor, when idle.
 " Useful when studying strange source code.
-" Type z/ to toggle highlighting on/off.
+" -----------------------------------------------------------------------------
 nnoremap <C-S> :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
-"inoremap <C-S> <ESC> :call AutoHighlightOn()<CR>
 
 function! AutoHighlightToggle()
   let @/ = ''
@@ -35,16 +33,6 @@ function! AutoHighlightToggle()
     echo 'Highlight current word: ON'
     return 1
   endif
-endfunction
-
-function! AutoHighlightOn()
-  augroup auto_highlight
-  au!
-  au CursorHold * let @/ = '\V\<'.escape(expand('<cword>'), '\').'\>'
-  augroup end
-  setl updatetime=500
-  echo 'Highlight current word: ON'
-  return 1
 endfunction
 
 " Команда для отображение настроек текущей цветовой схемы

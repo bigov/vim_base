@@ -1,6 +1,6 @@
 " local syntax file - set colors
 " Vim color file
-" Last Change: 06.01.2022
+" Last Change: 05.01.2022
 
 set background=light
 
