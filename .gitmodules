@@ -1,3 +1,6 @@
 [submodule "pack/git/opt/vim-xtabline"]
 	path = pack/git/opt/vim-xtabline
 	url = https://github.com/mg979/vim-xtabline.git
+[submodule "pack/git/opt/vim-macaw"]
+	path = pack/git/opt/vim-macaw
+	url = https://github.com/urbainvaes/vim-macaw.git
