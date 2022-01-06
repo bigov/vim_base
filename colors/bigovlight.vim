@@ -14,7 +14,7 @@ let g:colors_name = "bigovlight"
 if has('gui_running') || (has('termguicolors') && &termguicolors) "GVIM mode
   let s:M = 'gui'
     let s:C00 = '#FFFFFF' "БЕЛЫЙ  фон
-    let s:C01 = '#444444' "ЧЕРНЫЙ обычного текста
+    let s:C01 = '#404040' "ЧЕРНЫЙ обычного текста
     let s:C02 = '#8F8F8F' "СЕРЫЙ
     let s:C03 = '#0078D7' "СИНИЙ Selection fg=#ffffff bg=#0078d7
     let s:C04 = '#CCCCCC' "СВЕТЛО-СЕРЫЙ
@@ -35,19 +35,20 @@ else "Console Vim
     let s:C05 = '230'
     let s:C06 = '255'
     let s:C07 = '252'
-    let s:C08 = '12'
-    let s:C09 = '2'
-    let s:C10 = '17'
+    let s:C08 = '4'
+    let s:C09 = '28'
+    let s:C10 = '18'
     let s:C11 = '9'
 endif
 
 let s:TextCommon    = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C01
 let s:TextBold      = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C01.' '.s:M.'=bold'
+let s:TextInclude   = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C10.' '.s:M.'=bold'
 let s:TextGray      = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C02
 let s:TextLight     = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C04
 let s:TextSelect    = s:M.'bg='.s:C03.' '.s:M.'fg='.s:C00
 let s:TextNumber    = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C08
-let s:TextString    = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C09
+let s:TextString    = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C09.' '.s:M.'=bold'
 let s:TextKeyword   = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C10
 let s:TextError     = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C11
 let s:PCursorLine   = s:M.'bg='.s:C05.' '.s:M.'fg=NONE '     .s:M.'=NONE'
@@ -60,7 +61,7 @@ let s:TSpecialKey   = s:M.'bg=NONE '     .s:M.'fg='.s:C07
 exe 'hi Boolean          '.s:TextNumber
 exe 'hi Character        '.s:TextCommon
 exe 'hi Comment          '.s:TextGray
-exe 'hi Conditional      '.s:TextCommon
+exe 'hi Conditional      '.s:TextInclude
 exe 'hi Constant         '.s:TextNumber
 exe 'hi Debug            '.s:TextCommon
 exe 'hi Define           '.s:TextBold
@@ -75,24 +76,24 @@ exe 'hi Float            '.s:TextNumber
 exe 'hi Function         '.s:TextCommon
 exe 'hi Identifier       '.s:TextCommon
 exe 'hi Ignore           '.s:TextCommon
-exe 'hi Include          '.s:TextCommon
+exe 'hi Include          '.s:TextInclude
 exe 'hi Keyword          '.s:TextKeyword
 exe 'hi Label            '.s:TextCommon
-exe 'hi Macro            '.s:TextCommon
+exe 'hi Macro            '.s:TextInclude
 exe 'hi MatchParen       '.s:TextSelect
 exe 'hi Normal           '.s:TextCommon
 exe 'hi Number           '.s:TextNumber
 exe 'hi Operator         '.s:TextCommon
 exe 'hi PreProc          '.s:TextKeyword
 exe 'hi Precondit        '.s:TextCommon
-exe 'hi Repeat           '.s:TextCommon
+exe 'hi Repeat           '.s:TextInclude
 exe 'hi Special          '.s:TextCommon
 exe 'hi SpecialChar      '.s:TextCommon
 exe 'hi SpecialComment   '.s:TextGray
-exe 'hi Statement        '.s:TextCommon
+exe 'hi Statement        '.s:TextInclude
 exe 'hi StorageClass     '.s:TextCommon
 exe 'hi String           '.s:TextString
-exe 'hi Structure        '.s:TextCommon
+exe 'hi Structure        '.s:TextInclude
 exe 'hi Tag              '.s:TextCommon
 exe 'hi Title            '.s:TextCommon
 exe 'hi Todo             '.s:TextCommon
