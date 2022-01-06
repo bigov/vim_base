@@ -19,7 +19,7 @@ if has('gui_running') || (has('termguicolors') && &termguicolors) "GVIM mode
     let s:C03 = '#0078D7' "СИНИЙ Selection fg=#ffffff bg=#0078d7
     let s:C04 = '#CCCCCC' "СВЕТЛО-СЕРЫЙ
     let s:C05 = '#FFFFD7' "Подсветка курсора
-    let s:C06 = '#FAF0E6' "Cornsilk подсветка границы 80
+    let s:C06 = '#EEEEEE' "Cornsilk подсветка границы 80
     let s:C07 = '#ADD8E6' "СВЕТЛО-ГОЛУБОЙ специальные символы
     let s:C08 = '#0000FF' "СИНИЙ константы
     let s:C09 = '#008000' "ЗЕЛЕНЫЙ строки
