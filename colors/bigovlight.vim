@@ -31,7 +31,7 @@ else "Console Vim
     let s:C01 = '236'
     let s:C02 = '248'
     let s:C03 = '21'
-    let s:C04 = '254'
+    let s:C04 = '252'
     let s:C05 = '230'
     let s:C06 = '255'
     let s:C07 = '252'
@@ -96,8 +96,8 @@ exe 'hi Structure        '.s:TextCommon
 exe 'hi Tag              '.s:TextCommon
 exe 'hi Title            '.s:TextCommon
 exe 'hi Todo             '.s:TextCommon
-exe 'hi Type             '.s:TextCommon
-exe 'hi Typedef          '.s:TextCommon
+exe 'hi Type             '.s:TextBold
+exe 'hi Typedef          '.s:TextBold
 exe 'hi Underlined       '.s:TextCommon
 exe 'hi WildMenu         '.s:TextCommon
 
