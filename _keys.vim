@@ -36,6 +36,8 @@ map <Space>n :w<cr>:bn<cr>
 map <Space>p :w<cr>:bp<cr>
 map <Space>d :bd!<cr>
 
+map <Space>t :terminal<cr>
+
 "[*] Подсветка выделения
 nn * *N
 vno * y :execute ":let @/=@\""<cr> :execute "set hlsearch"<cr>

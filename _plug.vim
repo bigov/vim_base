@@ -10,7 +10,7 @@ let g:xtabline_settings.tab_number_in_left_corner = 1
 hi XTFill guibg=gray86 ctermbg=253                           "цвет панели
 
 hi XTSelect guibg=white guifg=gray24 gui=NONE ctermbg=15     "активная вкладка
-hi link XTSelectMod XTSelect                                 "индикатор изменения
+hi XTSelectMod guibg=white guifg=gray24 gui=NONE ctermbg=15  "индикатор изменения
 hi XTNumSel guibg=gray60 guifg=white ctermbg=243 ctermfg=15  "номер активной вкладки
 
 hi XTHidden guibg=gray75 guifg=white ctermbg=248 ctermfg=15  "неактивная вкладка
@@ -20,7 +20,7 @@ hi link XTNum XTNumSel                                       "номер неа�
 hi XTExtra guibg=gray86 ctermbg=253 ctermfg=229 guifg=yellow1 gui=NONE  "текущий режим
 hi link XTExtraMod XTExtra
 hi link XTCorner XTHidden                                    "название текущей папки
-hi link XTVisibleMod XTCorner                                "несохраненные изменения (*)
+hi XTVisibleMod guibg=gray75 guifg=white ctermbg=248 ctermfg=15 "несохраненные изменения (*)
 
 hi XTVisible guibg=gray75 guifg=white ctermbg=248 ctermfg=15 "неактивное окно
 
