@@ -83,7 +83,7 @@ exe 'hi DiffAdd          '.s:TextCommon
 exe 'hi DiffChange       '.s:TextCommon
 exe 'hi DiffDelete       '.s:TextKeyword
 exe 'hi DiffText         '.s:TextCommon
-"exe 'hi Directory        '.s:PanelActive
+exe 'hi Directory        '.s:TextCommon
 "exe 'hi EndOfBuffer guifg=tan3 ctermfg=88'
 exe 'hi Error            '.s:TextError
 "exe 'hi ErrorMsg         '.s:PanelActive
