@@ -4,3 +4,6 @@
 [submodule "pack/git/opt/vim-macaw"]
 	path = pack/git/opt/vim-macaw
 	url = https://github.com/urbainvaes/vim-macaw.git
+[submodule "pack/git/opt/vim-cpp-modern"]
+	path = pack/git/opt/vim-cpp-modern
+	url = https://github.com/bfrg/vim-cpp-modern.git
