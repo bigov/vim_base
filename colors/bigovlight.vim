@@ -18,7 +18,7 @@ if has('gui_running') || (has('termguicolors') && &termguicolors) "GVIM mode
     let s:C02 = '#8F8F8F' "СЕРЫЙ
     let s:C03 = '#0078D7' "СИНИЙ Selection fg=#ffffff bg=#0078d7
     let s:C04 = '#CCCCCC' "СВЕТЛО-СЕРЫЙ
-    let s:C05 = '#E8FFE8' "Подсветка курсора (только в gvim)
+    let s:C05 = '#FFFFD7' "Подсветка курсора
     let s:C06 = '#FAF0E6' "Cornsilk подсветка границы 80
     let s:C07 = '#ADD8E6' "СВЕТЛО-ГОЛУБОЙ специальные символы
     let s:C08 = '#0000FF' "СИНИЙ константы
@@ -32,8 +32,8 @@ else "Console Vim
     let s:C02 = '248'
     let s:C03 = '21'
     let s:C04 = '254'
-    let s:C05 = 'NONE'
-    let s:C06 = '230'
+    let s:C05 = '230'
+    let s:C06 = '255'
     let s:C07 = '252'
     let s:C08 = '12'
     let s:C09 = '2'
@@ -50,7 +50,7 @@ let s:TextNumber    = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C08
 let s:TextString    = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C09
 let s:TextKeyword   = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C10
 let s:TextError     = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C11
-let s:PCursorLine   = s:M.'bg='.s:C05.' '.s:M.'fg=NONE'
+let s:PCursorLine   = s:M.'bg='.s:C05.' '.s:M.'fg=NONE '     .s:M.'=NONE'
 let s:PCursorLineNR = s:M.'bg='.s:C05.' '.s:M.'fg='.s:C03.' '.s:M.'=bold'
 let s:PanelMaxLen   = s:M.'bg='.s:C06.' '.s:M.'fg=NONE'
 let s:PanelCursor   = s:M.'bg='.s:C02.' '.s:M.'fg='.s:C00
