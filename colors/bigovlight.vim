@@ -13,142 +13,139 @@ let g:colors_name = "bigovlight"
 
 if has('gui_running') || (has('termguicolors') && &termguicolors) "GVIM mode
   let s:M = 'gui'
-    let s:C00 = '#FFFFFF' "БЕЛЫЙ  фон
-    let s:C01 = '#242424' "ЧЕРНЫЙ обычного текста
-    let s:C02 = '#8F8F8F' "ТЕМНО-СЕРЫЙ
-    let s:C03 = '#0078D7' "СИНИЙ Selection fg=#ffffff bg=#0078d7
-    let s:C04 = '#1C86EE' "СИНИЙ ЯРКИЙ visual
-    let s:C05 = '#FFFFD7' "Подсветка курсора
-    let s:C06 = '#EEEEEE' "БЛЕДНО-СЕРЫЙ подсветка границы 80
-    let s:C07 = '#ADD8E6' "СВЕТЛО-ГОЛУБОЙ специальные символы
-    let s:C08 = '#0000FF' "СИНИЙ константы
-    let s:C09 = '#008000' "ЗЕЛЕНЫЙ строки
-    let s:C10 = '#000080' "ТЕМНО-СИНИЙ keyword
-    let s:C11 = '#FF0000' "КРАСНЫЙ ошибка
-    let s:C12 = '#FFD700' "ЗОЛОТО (темно-желтый)
-    let s:C13 = '#AF00D7' "СИРЕНЕВЫЙ
+    let s:C00 = '#FFFFFF' "White БЕЛЫЙ
+    let s:C01 = '#242424' "Black ЧЕРНЫЙ
+    let s:C02 = '#8F8F8F' "Gray СЕРЫЙ
+    let s:C03 = '#AF00D7' "СИРЕНЕВЫЙ
+    let s:C04 = '#1C86EE' "Blue СИНИЙ
+    let s:C05 = '#FFFFD7' "LLemon СВЕТЛО-ЛИМОННЫЙ (линия курсора)
+    let s:C06 = '#EEEEEE' "LGray СВЕТЛО-СЕРЫЙ
+    let s:C07 = '#ADD8E6' "LBlue СВЕТЛО-ГОЛУБОЙ
+    let s:C09 = '#008000' "ЗЕЛЕНЫЙ
+    let s:C10 = '#000080' "DBlue ТЕМНО-СИНИЙ
+    let s:C11 = '#FF0000' "Red КРАСНЫЙ
+    let s:C12 = '#FFD700' "Gold ТЕМНО-ЖЕЛТЫЙ
 else "Console Vim
   let s:M = 'cterm'
     let s:C00 = '15'
     let s:C01 = '236'
     let s:C02 = '248'
-    let s:C03 = '21'
+    let s:C03 = '128'
     let s:C04 = '26'
     let s:C05 = '230'
     let s:C06 = '255'
     let s:C07 = '252'
-    let s:C08 = '4'
     let s:C09 = '28'
     let s:C10 = '18'
     let s:C11 = '9'
     let s:C12 = '214'
-    let s:C13 = '128'
 endif
-
-let s:TextCommon    = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C01
-let s:TextBold      = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C01.' '.s:M.'=bold'
-let s:TextInclude   = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C10.' '.s:M.'=bold'
-let s:TextGray      = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C02
-let s:TextSelect    = s:M.'bg='.s:C03.' '.s:M.'fg='.s:C00
-let s:TextNumber    = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C08
-let s:TextString    = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C09.' '.s:M.'=bold'
-let s:TextKeyword   = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C10
-let s:TextError     = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C11
-let s:TextIdent     = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C13
-let s:TextStorage   = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C13.' '.s:M.'=bold'
-let s:PCursorLine   = s:M.'bg='.s:C05.' '.s:M.'fg=NONE '     .s:M.'=NONE'
-let s:PCursorLineNR = s:M.'bg='.s:C05.' '.s:M.'fg='.s:C03.' '.s:M.'=bold'
-let s:PanelMaxLen   = s:M.'bg='.s:C06.' '.s:M.'fg=NONE'
+	
+let s:BlackBOnWhite = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C01.' '.s:M.'=bold'
+let s:BlackOnWhite  = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C01
+let s:DBlueOnGold   = s:M.'bg='.s:C12.' '.s:M.'fg='.s:C10
 let s:PanelCursor   = s:M.'bg='.s:C02.' '.s:M.'fg='.s:C00
-let s:PanelVisual   = s:M.'bg='.s:C04.' '.s:M.'fg='.s:C00.' '.s:M.'=bold'
-let s:PTabline      = s:M.'bg='.s:C07.' '.s:M.'fg='.s:C00.' '.s:M.'=NONE'
-let s:PTablineSel   = s:M.'bg='.s:C02.' '.s:M.'fg='.s:C00.' '.s:M.'=NONE'
-let s:TSpecialKey   = s:M.'bg=NONE '     .s:M.'fg='.s:C07
+let s:LBlueOn_      =                     s:M.'fg='.s:C07
+let s:TextError     = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C11
+let s:TextGray      = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C02
+let s:TextIdent     = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C03
+let s:TextInclude   = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C10.' '.s:M.'=bold'
+let s:TextKeyword   = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C10
+let s:TextNumber    = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C04.' '.s:M.'=bold'
+let s:TextStorage   = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C03.' '.s:M.'=bold'
+let s:TextString    = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C09.' '.s:M.'=bold'
+let s:WhiteBOnBlue  = s:M.'bg='.s:C04.' '.s:M.'fg='.s:C00.' '.s:M.'=bold'
+let s:WhiteOnBlue   = s:M.'bg='.s:C04.' '.s:M.'fg='.s:C00
+let s:WhiteBOnGray  = s:M.'bg='.s:C02.' '.s:M.'fg='.s:C00.' '.s:M.'=bold'
+let s:WhiteOnGray   = s:M.'bg='.s:C02.' '.s:M.'fg='.s:C00.' '.s:M.'=NONE'
+let s:WhiteOnLBlue  = s:M.'bg='.s:C07.' '.s:M.'fg='.s:C00.' '.s:M.'=NONE'
+let s:_OnLGray      = s:M.'bg='.s:C06
+let s:_OnLLemon     = s:M.'bg='.s:C05
 
 exe 'hi Boolean          '.s:TextNumber
-exe 'hi Character        '.s:TextCommon
-exe 'hi ColorColumn      '.s:PanelMaxLen
+exe 'hi Character        '.s:BlackOnWhite
+exe 'hi ColorColumn      '.s:_OnLGray
 exe 'hi Comment          '.s:TextGray
-"exe 'hi Conceal guifg=tan3 ctermfg=88'
+"exe 'hi Conceal guifg=tan3 ctermfg=88' TextInclude
 exe 'hi Conditional      '.s:TextInclude
 exe 'hi Constant         '.s:TextNumber
 exe 'hi Cursor           '.s:PanelCursor
-exe 'hi CursorColumn     '.s:PCursorLine
-exe 'hi CursorLine       '.s:PCursorLine
-exe 'hi CursorLineNr     '.s:PCursorLineNR
-exe 'hi Debug            '.s:TextCommon
-exe 'hi Define           '.s:TextBold
-exe 'hi Delimiter        '.s:TextCommon
-exe 'hi DiffAdd          '.s:TextCommon
-exe 'hi DiffChange       '.s:TextCommon
+exe 'hi CursorColumn     '.s:_OnLLemon
+exe 'hi CursorLine       '.s:_OnLLemon
+exe 'hi CursorLineNr     '.s:DBlueOnGold
+exe 'hi Debug            '.s:BlackOnWhite
+exe 'hi Define           '.s:BlackBOnWhite
+exe 'hi Delimiter        '.s:BlackOnWhite
+exe 'hi DiffAdd          '.s:BlackOnWhite
+exe 'hi DiffChange       '.s:BlackOnWhite
 exe 'hi DiffDelete       '.s:TextKeyword
-exe 'hi DiffText         '.s:TextCommon
-exe 'hi Directory        '.s:TextCommon
-"exe 'hi EndOfBuffer guifg=tan3 ctermfg=88'
+exe 'hi DiffText         '.s:BlackOnWhite
+exe 'hi Directory        '.s:BlackOnWhite
+exe 'hi EndOfBuffer guifg=#FFFFFF guibg=#FFFFFF'
 exe 'hi Error            '.s:TextError
 "exe 'hi ErrorMsg         '.s:PanelActive
-exe 'hi Exception        '.s:TextCommon
+exe 'hi Exception        '.s:BlackOnWhite
 exe 'hi Float            '.s:TextNumber
 "exe 'hi FoldColumn       '.s:PanelActive
 "exe 'hi Folded           '.s:PanelActive
-exe 'hi Function         '.s:TextBold
+exe 'hi Function         '.s:BlackBOnWhite
 exe 'hi Identifier       '.s:TextIdent
-exe 'hi Ignore           '.s:TextCommon
-exe 'hi IncSearch        '.s:TextSelect
+exe 'hi Ignore           '.s:BlackOnWhite
+"exe 'hi IncSearch        '.s:WhiteOnBlue
 exe 'hi Include          '.s:TextInclude
 exe 'hi Keyword          '.s:TextKeyword
-exe 'hi Label            '.s:TextCommon
+exe 'hi Label            '.s:BlackOnWhite
 exe 'hi LineNr           '.s:TextGray
 exe 'hi Macro            '.s:TextInclude
-exe 'hi MatchParen       '.s:TextSelect
-exe 'hi ModeMsg          '.s:TextCommon
-exe 'hi MoreMsg          '.s:TextCommon
-exe 'hi Normal           '.s:TextCommon
+exe 'hi MatchParen       '.s:BlackBOnWhite
+exe 'hi ModeMsg          '.s:BlackOnWhite
+exe 'hi MoreMsg          '.s:BlackOnWhite
+exe 'hi Normal           '.s:BlackOnWhite
 exe 'hi Number           '.s:TextNumber
-exe 'hi Operator         '.s:TextCommon
-exe 'hi Pmenu            '.s:PTabline
+exe 'hi Operator         '.s:BlackOnWhite
+exe 'hi Pmenu            '.s:WhiteOnLBlue
 "exe 'hi PmenuSBar        '.s:PanelActive
-exe 'hi PmenuSel         '.s:TextBold
+exe 'hi PmenuSel         '.s:DBlueOnGold
 "exe 'hi PmenuThumb       '.s:PanelActive
 exe 'hi PreProc          '.s:TextKeyword
-exe 'hi Precondit        '.s:TextCommon
+exe 'hi Precondit        '.s:BlackOnWhite
 "exe 'hi Question         '.s:PanelActive
 "exe 'hi QuickFixLine guifg=tan3 ctermfg=88'
 exe 'hi Repeat           '.s:TextInclude
-exe 'hi Search           '.s:TextSelect
+exe 'hi Search           '.s:WhiteBOnGray
 exe 'hi SignColumn       '.s:TextGray
-exe 'hi Special          '.s:TextCommon
-exe 'hi SpecialChar      '.s:TextCommon
+exe 'hi Special          '.s:BlackOnWhite
+exe 'hi SpecialChar      '.s:BlackOnWhite
 exe 'hi SpecialComment   '.s:TextGray
-exe 'hi SpecialKey       '.s:TSpecialKey
+exe 'hi SpecialKey       '.s:LBlueOn_
 "exe 'hi SpellBad guifg=tan3 ctermfg=88'
 "exe 'hi SpellCap guifg=gray24 ctermfg=0'
 "exe 'hi SpellLocal guifg=gray24 ctermfg=0'
 "exe 'hi SpellRare guifg=gray24 ctermfg=0'
 exe 'hi Statement        '.s:TextInclude
 "exe 'hi StatusLine       '.s:PanelActive
-exe 'hi StatusLineNC     '.s:PTabline
+exe 'hi StatusLineNC     '.s:WhiteOnLBlue
 "exe 'hi StatusLineTermNC '.s:PanelPassiv
 "exe 'hi StatusLineTerm   '.s:PanelActive
 exe 'hi StorageClass     '.s:TextStorage
 exe 'hi String           '.s:TextString
 exe 'hi Structure        '.s:TextInclude
-exe 'hi TabLine          '.s:PTabline
-exe 'hi TabLineSel       '.s:PTablineSel
-exe 'hi Tag              '.s:TextCommon
-exe 'hi Title            '.s:TextCommon
+exe 'hi TabLine          '.s:WhiteOnLBlue
+exe 'hi TabLineSel       '.s:WhiteOnGray
+exe 'hi Tag              '.s:BlackOnWhite
+exe 'hi Title            '.s:BlackOnWhite
 "exe 'hi Titled           '.s:PanelActive
-exe 'hi Todo             '.s:TextCommon
+exe 'hi Todo             '.s:BlackOnWhite
 "exe 'hi ToolbarButton guibg=gray80 guifg=gray24 ctermfg=0'
 "exe 'hi ToolbarLine guifg=gray24 ctermfg=0'
 exe 'hi Type             '.s:TextInclude
-exe 'hi Typedef          '.s:TextBold
-exe 'hi Underlined       '.s:TextCommon
+exe 'hi Typedef          '.s:BlackBOnWhite
+exe 'hi Underlined       '.s:BlackOnWhite
 "exe 'hi VertSplit        '.s:PVertSplit
-exe 'hi Visual           '.s:PanelVisual
+exe 'hi Visual           '.s:WhiteBOnBlue
 "exe 'hi VisualNOS guifg=gray24 ctermfg=0'
 "exe 'hi WarningMsg       '.s:PanelActive
-exe 'hi WildMenu         '.s:TextCommon
+exe 'hi WildMenu         '.s:BlackOnWhite
 
 " XTabline theme
 " -----------------------------------------------------------------------------
