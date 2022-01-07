@@ -10,11 +10,10 @@ if exists("syntax_on")
 endif
 
 let g:colors_name = "bigovlight"
-hi EndOfBuffer guifg=#FFFFFF guibg=#FFFFFF
 
 if has('gui_running') || (has('termguicolors') && &termguicolors) "GVIM mode
   let s:M = 'gui'
-    let s:C00 = '#FFFFFF' "White БЕЛЫЙ
+    let s:C00 = '#FFFFFF' "White БЕЛЫЙ TextError
     let s:C01 = '#242424' "Black ЧЕРНЫЙ
     let s:C02 = '#8F8F8F' "Gray СЕРЫЙ
     let s:C03 = '#AF00D7' "СИРЕНЕВЫЙ
@@ -29,22 +28,22 @@ if has('gui_running') || (has('termguicolors') && &termguicolors) "GVIM mode
 else "Console Vim
   let s:M = 'cterm'
     let s:C00 = '15'
-    let s:C01 = '236'
-    let s:C02 = '248'
+    let s:C01 = '235'
+    let s:C02 = '240'
     let s:C03 = '128'
     let s:C04 = '26'
     let s:C05 = '230'
     let s:C06 = '255'
-    let s:C07 = '252'
+    let s:C07 = '117'
     let s:C09 = '28'
     let s:C10 = '18'
     let s:C11 = '9'
-    let s:C12 = '214'
+    let s:C12 = '220'
 endif
 
 let s:BlackBOnWhite = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C01.' '.s:M.'=bold'
 let s:BlackOnWhite  = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C01
-let s:DBlueOnGold   = s:M.'bg='.s:C12.' '.s:M.'fg='.s:C10
+let s:DBlueOnGold   = s:M.'bg='.s:C12.' '.s:M.'fg='.s:C10.' '.s:M.'=NONE'
 let s:GoldOnBlue    = s:M.'bg='.s:C04.' '.s:M.'fg='.s:C12
 let s:PanelCursor   = s:M.'bg='.s:C02.' '.s:M.'fg='.s:C00
 let s:LBlueOn_      =                     s:M.'fg='.s:C07
@@ -60,8 +59,9 @@ let s:WhiteBOnBlue  = s:M.'bg='.s:C04.' '.s:M.'fg='.s:C00.' '.s:M.'=bold'
 let s:WhiteBOnGray  = s:M.'bg='.s:C02.' '.s:M.'fg='.s:C00.' '.s:M.'=bold'
 let s:WhiteOnGray   = s:M.'bg='.s:C02.' '.s:M.'fg='.s:C00.' '.s:M.'=NONE'
 let s:WhiteOnLBlue  = s:M.'bg='.s:C07.' '.s:M.'fg='.s:C00.' '.s:M.'=NONE'
+let s:WhiteOnWhite  = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C00.' '.s:M.'=NONE'
 let s:_OnLGray      = s:M.'bg='.s:C06
-let s:_OnLLemon     = s:M.'bg='.s:C05
+let s:_OnLLemon     = s:M.'bg='.s:C05.' '                    .s:M.'=NONE'
 
 exe 'hi Boolean          '.s:TextNumber
 exe 'hi Character        '.s:BlackOnWhite
@@ -82,6 +82,7 @@ exe 'hi DiffChange       '.s:BlackOnWhite
 exe 'hi DiffDelete       '.s:TextKeyword
 exe 'hi DiffText         '.s:BlackOnWhite
 exe 'hi Directory        '.s:BlackOnWhite
+exe 'hi EndOfBuffer      '.s:WhiteOnWhite
 exe 'hi Error            '.s:TextError
 "exe 'hi ErrorMsg
 exe 'hi Exception        '.s:BlackOnWhite
