@@ -26,6 +26,7 @@ if has('gui_running') || (has('termguicolors') && &termguicolors) "GVIM mode
     let s:C11 = '#FF0000' "Red КРАСНЫЙ
     let s:C12 = '#FFE844' "Gold
 else "Console Vim
+  set t_Co=256
   let s:M = 'cterm'
     let s:C00 = '15'
     let s:C01 = '235'
