@@ -149,22 +149,16 @@ exe 'hi WildMenu         '.s:BlackOnWhite
 
 " XTabline theme
 " -----------------------------------------------------------------------------
-"hi XTFill guibg=#666666 ctermbg=236                           "цвет панели
-
-"hi XTSelect guibg=white guifg=gray24 gui=NONE ctermbg=15     "активная вкладка
-"hi XTSelectMod guibg=white guifg=gray24 gui=NONE ctermbg=15  "индикатор изменения
-"hi XTNumSel guibg=gray60 guifg=white ctermbg=243 ctermfg=15  "номер активной вкладки
-
-"hi XTHidden guibg=#EEEEEE guifg=#000000 ctermbg=254 ctermfg=0 cterm=underline gui=underline  "неактивная вкладка
-"hi link XTHiddenMod XTHidden                                 "индикатор изменения
-"hi link XTNum XTNumSel                                       "номер неактивной вкладки
-
-"hi XTExtra guibg=#666666 ctermbg=236 guifg=#FFFFFF ctermfg=15 gui=NONE  "текущий режим
-"hi link XTExtraMod XTExtra
-"hi link XTCorner XTHidden                                    "название текущей папки
-"hi XTVisibleMod guibg=gray75 guifg=white ctermbg=248 ctermfg=15 "несохраненные изменения (*)
-
-"hi XTVisible guibg=gray75 guifg=white ctermbg=248 ctermfg=15 "неактивное окно
-
-"hi link XTSpecial XTSelect                                   "специальные окна (NerdTree...)
-
+"XTFill       - цвет панели
+"XTSelect     - активная вкладка
+"XTSelectMod  - индикатор изменения
+"XTNumSel     - номер активной вкладки
+"XTHidden     - неактивная вкладка
+"XTHiddenMod  - индикатор изменения
+"XTNum номер  - неактивной вкладки
+"XTExtra      - текущий режим
+"XTExtraMod
+"XTCorner     - название текущей папки
+"XTVisibleMod - несохраненные изменения (*)
+"XTVisible    - неактивное окно
+"XTSpecial    - специальные окна (NerdTree...)
