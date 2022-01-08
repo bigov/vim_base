@@ -149,18 +149,3 @@ exe 'hi Visual           '.s:GoldOnBlue
 "exe 'hi WarningMsg
 exe 'hi WildMenu         '.s:BlackOnWhite
 
-" XTabline theme
-" -----------------------------------------------------------------------------
-"XTFill       - цвет панели
-"XTSelect     - активная вкладка
-"XTSelectMod  - индикатор изменения
-"XTNumSel     - номер активной вкладки
-"XTHidden     - неактивная вкладка
-"XTHiddenMod  - индикатор изменения
-"XTNum номер  - неактивной вкладки
-"XTExtra      - текущий режим
-"XTExtraMod
-"XTCorner     - название текущей папки
-"XTVisibleMod - несохраненные изменения (*)
-"XTVisible    - неактивное окно
-"XTSpecial    - специальные окна (NerdTree...)

@@ -5,7 +5,7 @@
 "----------------------------------------------------------------------------"
 
 set antialias
-"set guioptions-=T
+"set guioptions-=T  "Убрать панель значков
 set lines=64
 set columns=132
 if has('win32')

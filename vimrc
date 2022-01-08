@@ -1,7 +1,6 @@
 "----------------------------------------------------------------------------"
-"
-" Edited: 05.11.2022
-"
+" Details here: https://vimhelp.org/options.txt.html
+" Edited: 08.01.2022
 "----------------------------------------------------------------------------"
 set nocompatible
 set number
@@ -20,8 +19,9 @@ set foldmethod=manual           "marker | indent | manual | expr | syntax | diff
 set autoindent                  "автоотступ для новой строки
 set smartindent                 "добавление отступов, когда необходимо
 set backspace=indent,eol,nostop "https://vimhelp.org/options.txt.html#%27backspace%27
-set guioptions=gmt
-set showtabline=2
+
+"set guioptions=gmt              "По-умолчанию: egmrLtT
+"set showtabline=2               "Всегда видна
 
 set cursorcolumn
 au WinEnter * set cursorcolumn
