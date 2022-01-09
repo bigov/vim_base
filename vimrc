@@ -7,9 +7,10 @@ set number
 set showmode
 set showcmd
 set expandtab                   "To insert a real tab use CTRL-V<Tab>
-set tabstop=2
-set shiftwidth=2                "ширина сдвига строк по команде ">"
-set nowrap                        "залом строки по границе окна
+"set tabstop=2                  "по-умолчанию = 8
+set softtabstop=2
+set shiftwidth=4                "ширина сдвига строк по команде ">"
+set nowrap                      "залом строки по границе окна
 set cmdheight=2
 set laststatus=2
 set incsearch                   "Инкрементальный поиск (в процессе набора)
@@ -33,7 +34,8 @@ au WinLeave * set nocursorline
 
 " Подсветка пробелов, табов и др. символов
 set list
-set listchars=tab:‣\ ,trail:·,precedes:«,extends:»
+"set listchars=tab:‣\ ,trail:·,precedes:«,extends:»
+set listchars=tab:\ \ ,trail:·,precedes:«,extends:»
 
 " Подсветка вертикальной границы 80 символов
 set textwidth=0
@@ -52,7 +54,7 @@ set statusline=[%n]\ %<%f\ [%Y%R,%{&ff},%{&fenc}%W]%=%m\ %03l/%03L\ [%03v\ %03b]
 nohlsearch
 syntax enable
 
-filetype on                      "Vim filetype   detection
+filetype on                      "Vim filetype detection
 filetype plugin on               "Vim plugins system
 filetype plugin indent on
 

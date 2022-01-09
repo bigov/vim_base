@@ -7,3 +7,18 @@
 [submodule "pack/git/opt/vim-cpp-modern"]
 	path = pack/git/opt/vim-cpp-modern
 	url = https://github.com/bfrg/vim-cpp-modern.git
+[submodule "pack/git/opt/supertab"]
+	path = pack/git/opt/supertab
+	url = https://github.com/ervandew/supertab.git
+[submodule "pack/git/opt/vim-dirvish"]
+	path = pack/git/opt/vim-dirvish
+	url = https://github.com/justinmk/vim-dirvish.git
+[submodule "pack/git/opt/vimwiki"]
+	path = pack/git/opt/vimwiki
+	url = https://github.com/vimwiki/vimwiki.git
+[submodule "pack/git/opt/tagbar"]
+	path = pack/git/opt/tagbar
+	url = https://github.com/preservim/tagbar.git
+[submodule "pack/git/opt/papercolor-theme"]
+	path = pack/git/opt/papercolor-theme
+	url = https://github.com/NLKNguyen/papercolor-theme.git
