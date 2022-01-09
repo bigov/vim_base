@@ -55,10 +55,3 @@ vnoremap <C-Insert> "+y
 " SHIFT-Insert are Paste
 map <S-Insert> "+gP
 cmap <S-Insert> <C-R>+
-
-" CTRL-F4 is Close buffer
-noremap  <C-F4> :bd!<cr>
-inoremap <C-F4> <C-O>:bd!<cr>
-cnoremap <C-F4> <C-C>:bd!<cr>
-onoremap <C-F4> <C-C>:bd!<cr>
-
