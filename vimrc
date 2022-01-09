@@ -28,6 +28,12 @@ set cursorline
 au WinEnter * set cursorline
 au WinLeave * set nocursorline
 
+set fileformat=unix
+set encoding=utf-8
+set langmenu=ru_RU.UTF-8
+set fileencodings=utf-8,cp1251,cp866,koi8-r
+let $LANG='ru_RU'
+
 " Подсветка пробелов, табов и др. символов
 set list
 set listchars=tab:‣\ ,trail:·,precedes:«,extends:»
@@ -36,12 +42,6 @@ set listchars=tab:‣\ ,trail:·,precedes:«,extends:»
 set textwidth=0
 set cc=+2 " show the right border column on number = textwidth+1
 set cc=80 " Когда textwidth=0, то маркера не видно, поэтому ставим число
-
-set fileformat=unix
-set encoding=utf-8
-set langmenu=ru_RU.UTF-8
-set fileencodings=utf-8,cp1251,cp866,koi8-r
-let $LANG='ru_RU'
 
 " Настройка строки статуса
 set statusline=[%n]\ %<%f\ [%Y%R,%{&ff},%{&fenc}%W]%=%m\ %03l/%03L\ [%03v\ %03b]
