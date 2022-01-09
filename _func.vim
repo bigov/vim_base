@@ -10,12 +10,6 @@ au BufRead,BufNewFile *.vim setlocal ff=unix
 " Автоматическое назначение формата и кодировки для пакетных файлов MS-Windows
 au BufRead,BufNewFile *.\(cmd\|bat\) silent exec 'e ++enc=cp866 %' | setlocal ff=dos
 
-" -----------------------------------------------------------------------------
-" Highlight all instances of word under cursor, when idle.
-" Useful when studying strange source code.
-" -----------------------------------------------------------------------------
-nnoremap <C-S> :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
-
 function! AutoHighlightToggle()
   let @/ = ''
   if exists('#auto_highlight')

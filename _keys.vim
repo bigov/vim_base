@@ -1,25 +1,23 @@
 "[F2] (<Ctrl>+S) - сохранить содержимое из текущего буфера в файл
 ino <F2> <Esc>:write<cr>a
-ino <C-S> <Esc>:write<cr>a
 map <F2> :write<cr>
+
+ino <C-S> <Esc>:write<cr>a
 map <C-S> :write<cr>
+
+" -----------------------------------------------------------------------------
+" Highlight all instances of word under cursor, when idle.
+" Подсветка в тексте всех экземпляров слова под курсором.
+" -----------------------------------------------------------------------------
+nnoremap <C-S> :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
 
 "[F3] Execute current file as vim-script
 nn <F3> :so%<cr>
 ino <F3> <c-o>:w<cr><c-o>:so%<cr>
 
-"[F4] Переключени между файлами определений и объявлений
-nn <F4> :FSHere<cr>
-ino <F4> <c-o>:FSHere<cr>
-
 "[F6] Dialog for open new file
 ino <F6> <c-o>:Explore<cr>
 map <F6> :Explore<cr>
-
-"[F8] - включить/выключить панель навигации по коду
-no <F8> :TagbarToggle<cr>
-nn <F8> :TagbarToggle<cr>
-ino <F8> <c-o>:TagbarToggle<cr>
 
 "[Ctrl-F8] - выключить выделение
 no <C-F8> :nohlsearch<cr>
@@ -58,15 +56,9 @@ vnoremap <C-Insert> "+y
 map <S-Insert> "+gP
 cmap <S-Insert> <C-R>+
 
-" CTRL-Tab is Next window
-noremap <C-Tab> <C-W>w
-inoremap <C-Tab> <C-O><C-W>w
-cnoremap <C-Tab> <C-C><C-W>w
-onoremap <C-Tab> <C-C><C-W>w
-
-" CTRL-F4 is Close window
-noremap <C-F4> <C-W>c
-inoremap <C-F4> <C-O><C-W>c
-cnoremap <C-F4> <C-C><C-W>c
-onoremap <C-F4> <C-C><C-W>c
+" CTRL-F4 is Close buffer
+noremap  <C-F4> :bd!<cr>
+inoremap <C-F4> <C-O>:bd!<cr>
+cnoremap <C-F4> <C-C>:bd!<cr>
+onoremap <C-F4> <C-C>:bd!<cr>
 

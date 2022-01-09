@@ -13,33 +13,33 @@ let g:colors_name = "bigovlight"
 
 if has('gui_running') || (has('termguicolors') && &termguicolors) "GVIM mode
   let s:M = 'gui'
-    let s:C00 = '#FFFFFF' "White БЕЛЫЙ TextError
-    let s:C01 = '#242424' "Black ЧЕРНЫЙ
-    let s:C02 = '#8F8F8F' "Gray СЕРЫЙ
-    let s:C03 = '#AF00D7' "СИРЕНЕВЫЙ
-    let s:C04 = '#1C86EE' "Blue СИНИЙ
-    let s:C05 = '#FFFFD7' "LLemon СВЕТЛО-ЛИМОННЫЙ (линия курсора)
-    let s:C06 = '#EEEEEE' "LGray СВЕТЛО-СЕРЫЙ
-    let s:C07 = '#ADD8E6' "LBlue СВЕТЛО-ГОЛУБОЙ
-    let s:C09 = '#008000' "ЗЕЛЕНЫЙ
-    let s:C10 = '#000080' "DBlue ТЕМНО-СИНИЙ
-    let s:C11 = '#FF0000' "Red КРАСНЫЙ
-    let s:C12 = '#FFE844' "Gold
+  let s:C00 = '#FFFFFF' "White БЕЛЫЙ TextError
+  let s:C01 = '#242424' "Black ЧЕРНЫЙ
+  let s:C02 = '#8F8F8F' "Gray СЕРЫЙ
+  let s:C03 = '#AF00D7' "СИРЕНЕВЫЙ
+  let s:C04 = '#1C86EE' "Blue СИНИЙ
+  let s:C05 = '#FFFFD7' "LLemon СВЕТЛО-ЛИМОННЫЙ (линия курсора)
+  let s:C06 = '#EEEEEE' "LGray СВЕТЛО-СЕРЫЙ
+  let s:C07 = '#ADD8E6' "LBlue СВЕТЛО-ГОЛУБОЙ
+  let s:C09 = '#008000' "ЗЕЛЕНЫЙ
+  let s:C10 = '#000080' "DBlue ТЕМНО-СИНИЙ
+  let s:C11 = '#FF0000' "Red КРАСНЫЙ
+  let s:C12 = '#FFE844' "Gold
 else "Console Vim
   set t_Co=256
   let s:M = 'cterm'
-    let s:C00 = '15'
-    let s:C01 = '235'
-    let s:C02 = '240'
-    let s:C03 = '128'
-    let s:C04 = '26'
-    let s:C05 = '230'
-    let s:C06 = '255'
-    let s:C07 = '117'
-    let s:C09 = '28'
-    let s:C10 = '18'
-    let s:C11 = '9'
-    let s:C12 = '220'
+  let s:C00 = '15'
+  let s:C01 = '235'
+  let s:C02 = '240'
+  let s:C03 = '128'
+  let s:C04 = '26'
+  let s:C05 = '230'
+  let s:C06 = '255'
+  let s:C07 = '117'
+  let s:C09 = '28'
+  let s:C10 = '18'
+  let s:C11 = '9'
+  let s:C12 = '220'
 endif
 
 let s:BlackBOnWhite = s:M.'bg='.s:C00.' '.s:M.'fg='.s:C01.' '.s:M.'=bold'

@@ -1,13 +1,12 @@
 "----------------------------------------------------------------------------"
 " Details here: https://vimhelp.org/options.txt.html
-" Edited: 08.01.2022
+" Edited: 09.01.2022
 "----------------------------------------------------------------------------"
 set nocompatible
 set number
 set showmode
 set showcmd
 set expandtab                   "To insert a real tab use CTRL-V<Tab>
-"set tabstop=2                  "по-умолчанию = 8
 set softtabstop=2
 set shiftwidth=4                "ширина сдвига строк по команде ">"
 set nowrap                      "залом строки по границе окна
@@ -21,9 +20,6 @@ set autoindent                  "автоотступ для новой стро
 set smartindent                 "добавление отступов, когда необходимо
 set backspace=indent,eol,nostop "https://vimhelp.org/options.txt.html#%27backspace%27
 
-"set guioptions=gmt              "По-умолчанию: egmrLtT
-"set showtabline=2               "Всегда видна
-
 set cursorcolumn
 au WinEnter * set cursorcolumn
 au WinLeave * set nocursorcolumn
@@ -34,8 +30,7 @@ au WinLeave * set nocursorline
 
 " Подсветка пробелов, табов и др. символов
 set list
-"set listchars=tab:‣\ ,trail:·,precedes:«,extends:»
-set listchars=tab:\ \ ,trail:·,precedes:«,extends:»
+set listchars=tab:‣\ ,trail:·,precedes:«,extends:»
 
 " Подсветка вертикальной границы 80 символов
 set textwidth=0
@@ -51,9 +46,6 @@ let $LANG='ru_RU'
 " Настройка строки статуса
 set statusline=[%n]\ %<%f\ [%Y%R,%{&ff},%{&fenc}%W]%=%m\ %03l/%03L\ [%03v\ %03b]
 
-nohlsearch
-syntax enable
-
 filetype on                      "Vim filetype detection
 filetype plugin on               "Vim plugins system
 filetype plugin indent on
@@ -64,16 +56,11 @@ else
   let g:vimrc_dir=$HOME . '/.vim/'
 endif
 
+syntax enable
 colorscheme bigovlight
 
-exec "source " . g:vimrc_dir . "_keys.vim"
-exec "source " . g:vimrc_dir . "_func.vim"
 exec "source " . g:vimrc_dir . "_plug.vim"
+exec "source " . g:vimrc_dir . "_func.vim"
+exec "source " . g:vimrc_dir . "_keys.vim"
 
-"set allowrevins
-"set hidden
-"set mouse=a
-"set completeopt=menu            "чтоб сверху окном не хлопало
-"set splitright                  "Открываем вертикальные окна справа
-"set noguipty                    "Make external commands work through a pipe instead of a pseudo-tty
-
+helptags ALL
