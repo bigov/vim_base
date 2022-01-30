@@ -1,8 +1,10 @@
-" local syntax file - set colors
-" Vim color file
-" Last Change: 05.01.2022
+" -----------------------------------------------------------------------------
+" Vim colors file - local syntax file - set colors
+" Last Change: 09.01.2022
+" -----------------------------------------------------------------------------
 
 set background=light
+"set termguicolors off
 
 hi clear
 if exists("syntax_on")
@@ -30,7 +32,7 @@ else "Console Vim
   let s:M = 'cterm'
   let s:C00 = '15'
   let s:C01 = '235'
-  let s:C02 = '240'
+  let s:C02 = '250'
   let s:C03 = '128'
   let s:C04 = '26'
   let s:C05 = '230'
@@ -148,4 +150,7 @@ exe 'hi Visual           '.s:GoldOnBlue
 "exe 'hi VisualNOS
 "exe 'hi WarningMsg
 exe 'hi WildMenu         '.s:BlackOnWhite
+
+syn match VimMarkdownAnchor /---[a-z0-9A-Z_\-]\{1,64}---/
+hi VimMarkdownAnchor guifg=#DDDDDD guibg=#FFFFFF
 
