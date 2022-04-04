@@ -6,7 +6,7 @@ Clone the repository with submodules(!) to the "~ / .vim" or "% USERPROFILE% \ v
 
 ```
 $ mkdir .vim
-$ git clone --recursive https://bigov@github.com/bigov/vim_base.git .vim
+$ git clone --recursive https://github.com/bigov/vim_base.git .vim
 ```
 
 Using custom TTF font: "DejaVu Sans Mono for Powerline".
