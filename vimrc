@@ -3,6 +3,8 @@
 " Edited: 09.01.2022
 "----------------------------------------------------------------------------"
 set nocompatible
+colorscheme default
+
 set number
 set showmode
 set showcmd

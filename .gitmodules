@@ -22,3 +22,6 @@
 [submodule "pack/git/opt/papercolor-theme"]
 	path = pack/git/opt/papercolor-theme
 	url = https://github.com/NLKNguyen/papercolor-theme.git
+[submodule "pack/git/opt/vim-colorschemes"]
+	path = pack/git/opt/vim-colorschemes
+	url = https://gitflic.ru/project/bigov/vim-colorschemes.git
