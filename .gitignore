@@ -7,3 +7,4 @@ hgup.log
 .hgignore
 ^swap
 *.stackdump
+my-rc.vim
