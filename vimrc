@@ -57,7 +57,13 @@ else
 endif
 
 syntax enable
-colorscheme bigovlight
+
+" individual config - not synchronized by git
+if filereadable(g:vimrc_dir . "my-rc.vim")
+  exec "source " . g:vimrc_dir . "my-rc.vim"
+else
+  exec "source " . g:vimrc_dir . "my-rc-sample.vim"
+endif
 
 exec "source " . g:vimrc_dir . "_plug.vim"
 exec "source " . g:vimrc_dir . "_func.vim"
