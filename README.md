@@ -1,6 +1,7 @@
 # Basic custom setting VIM/GVIM
 
-![Screenshot](screenshot.png)
+![Screenshot](assets/screenshot1.png)
+![Screenshot](assets/screenshot2.png)
 
 Clone the repository with submodules(!) to the "~ / .vim" or "% USERPROFILE% \ vimfiles" folder (depending on your platform):
 
