@@ -1,9 +1,9 @@
-"----------------------------------------------------------------------------"
-" Details here: https://vimhelp.org/options.txt.html
-" Edited: 09.01.2022
-"----------------------------------------------------------------------------"
+"------------------------------------------------------------------------------
+"
+" Edited: 20.05.2022
+"
+"------------------------------------------------------------------------------
 set nocompatible
-colorscheme default
 
 set number
 set showmode
@@ -21,14 +21,6 @@ set foldmethod=manual           "marker | indent | manual | expr | syntax | diff
 set autoindent                  "автоотступ для новой строки
 set smartindent                 "добавление отступов, когда необходимо
 set backspace=indent,eol,nostop "https://vimhelp.org/options.txt.html#%27backspace%27
-
-set cursorcolumn
-au WinEnter * set cursorcolumn
-au WinLeave * set nocursorcolumn
-
-set cursorline
-au WinEnter * set cursorline
-au WinLeave * set nocursorline
 
 set fileformat=unix
 set encoding=utf-8
@@ -60,7 +52,7 @@ endif
 
 syntax enable
 
-" individual config - not synchronized by git
+" individual config (not synchronized by git)
 if filereadable(g:vimrc_dir . "my-rc.vim")
   exec "source " . g:vimrc_dir . "my-rc.vim"
 else

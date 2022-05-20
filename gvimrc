@@ -1,8 +1,17 @@
 "----------------------------------------------------------------------------"
 "
-" Edited: 09.01.2022
+" Edited: 20.05.2022
 "
 "----------------------------------------------------------------------------"
+
+" Внимание! Включение подсветки строки в терминальной сессии может привести
+" к притормаживанию курсора при переходах между строками (замечено в Putty)
+set cursorcolumn
+au WinEnter * set cursorcolumn
+au WinLeave * set nocursorcolumn
+set cursorline
+au WinEnter * set cursorline
+au WinLeave * set nocursorline
 
 set antialias
 set lines=64
