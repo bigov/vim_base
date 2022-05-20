@@ -14,3 +14,6 @@ Using custom TTF font: "DejaVu Sans Mono for Powerline".
 
 Customized keyboard shortcuts can be found in the "_keys.vim" file.
 
+---
+
+Репозиторий переехал на Российский хостинг: https://gitflic.ru/project/bigov/vimbase
